@@ -43,6 +43,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
+      - name: Make destination directory for compiled CSS
+        run: mkdir -vp /github/workspace/dist
+
       - name: Build with Jekyll  # Builds the application with Jekyll.
         uses: actions/jekyll-build-pages@v1
         with:
