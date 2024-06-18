@@ -43,15 +43,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Make destination directory for compiled CSS
-        run: mkdir -vp /tmp/repo-name/assets/css
-
-      - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build@v0.6.0
-        with:
-          source: _scss/main.scss
-          destination: /tmp/repo-name/assets/css/main.css
-
       - name: Build with Jekyll  # Builds the application with Jekyll.
         uses: actions/jekyll-build-pages@v1
         with:
