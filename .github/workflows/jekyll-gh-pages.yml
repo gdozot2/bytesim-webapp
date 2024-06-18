@@ -46,7 +46,7 @@ jobs:
           node-version: 20.x
 
       - name: Build with Jekyll  # Builds the application with Jekyll.
-        uses: actions/jekyll-build-pages@v4
+        uses: actions/jekyll-build-pages@v1
         with:
           source: ./build/
           destination: ./_site
