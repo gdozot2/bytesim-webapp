@@ -42,8 +42,6 @@ jobs:
       - name: Setup Pages  # Configures pages for deployment.
         id: pages
         uses: actions/configure-pages@v3
-        run:
-          using: 'node20'
 
       - name: Build with Jekyll  # Builds the application with Jekyll.
         uses: actions/jekyll-build-pages@v1
