@@ -43,14 +43,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Build with Jekyll  # Builds the application with Jekyll to create artifact used by github pages.
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./build/
-          destination: ./_site
-
       - name: Upload artifact  # Uploads the build artifact.
         uses: actions/upload-pages-artifact@v2
+                with:
+                  path: ./build
 
   # Deployment job
   deploy:
