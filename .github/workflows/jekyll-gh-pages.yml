@@ -38,6 +38,10 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+            REACT_APP_S3_BUCKET: ${{ secrets.REACT_APP_S3_BUCKET }}
+            REACT_APP_S3_REGION: ${{ secrets.REACT_APP_S3_REGION }}
+            REACT_APP_S3_UPLOAD_URL_GENERATOR: ${{ secrets.REACT_APP_S3_UPLOAD_URL_GENERATOR }}
 
       - name: Setup Pages  # Configures pages for deployment.
         id: pages
